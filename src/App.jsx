@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Home from './components/home'
 import About from './components/About'
 import Skills from './components/Skills'
 import Education from './components/Education'
 import Projects from './components/Projects'
-import Contact from './components/COntact'
+import Contact from './components/Contact'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer';
 
 import './App.css'
 
@@ -14,12 +14,14 @@ function App() {
   
   return (
     <div>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Education/>
-      <Projects/>
-      <Contact/>
+      <Navbar />
+        <Home/>
+        <About/>
+        <Skills/>
+        <Education/>
+        <Projects/>
+        <Contact/>
+        <Footer />
     </div>
   )
 }

@@ -1,0 +1,71 @@
+/* Navbar styles for mobile responsiveness */
+.navbar {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between; /* Ajusta los elementos dentro del navbar */
+    align-items: center; 
+    padding: 10px 20px; 
+    background-color: #ce2828; 
+    color: white;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav-links li a:hover {
+    color: #ddd;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .menu-icon span {
+      font-size: 24px;
+      color: white;
+    }
+  }
+  
+
+
+
+  
