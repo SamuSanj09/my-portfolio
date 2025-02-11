@@ -1,34 +1,19 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo">
-          <a href="/">My Portfolio</a>
+          <Link to="/">Mi Portafolio</Link>  {/* Link a la home */}
         </div>
-        <div className="menu-icon" onClick={handleClick}>
-          {/* You can use icons like FontAwesome for the hamburger menu */}
-          <span className={click ? "fas fa-times" : "fas fa-bars"}></span>
-        </div>
-        <ul className={click ? "nav-links active" : "nav-links"}>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+        
+        <ul className="nav-links">
+          <li><Link to="/skills">Skills</Link></li>      {/* Link a Skills */}
+          <li><Link to="/education">Education</Link></li> {/* Link a Education */}
+          <li><Link to="/projects">Projects</Link></li>   {/* Link a Projects */}
         </ul>
       </div>
     </nav>
