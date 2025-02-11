@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <p>&copy; 2025, Mi Portafolio. Todos los derechos reservados.</p>
+        <p>&copy; 2025, My Portfolio. All rights reserved.</p>
         <div className="social-links">
           <a href="https://github.com/SamuSanj09" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i> GitHub

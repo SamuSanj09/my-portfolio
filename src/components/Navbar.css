@@ -1,21 +1,23 @@
 /* Navbar styles for mobile responsiveness */
 .navbar {
-    width: 100%; 
-    display: flex;
-    justify-content: space-between; /* Ajusta los elementos dentro del navbar */
-    align-items: center; 
-    padding: 10px 20px; 
-    background-color: #ce2828; 
-    color: white;
-  }
-  
-  .navbar-container {
-    display: flex;
-    align-items: center;
-    width: 100%; /* Asegúrate de que ocupe todo el ancho */
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+  width: 100%; 
+  display: flex;
+  justify-content: space-between; /* Ajusta los elementos dentro del navbar */
+  align-items: center; 
+  padding: 10px 20px; 
+  background-color: #262626; /* Define el color de fondo de la navbar */
+  color: white;
+  border: 3.8px solid green; /* Añadir el borde verde y engrosarlo */
+  border-radius: 10px; 
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  margin: 0 auto;
+  padding: 0 20px;
+}
   
   .logo a {
     color: #fff;
