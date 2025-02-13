@@ -6,9 +6,6 @@
     transition: all 0.3s ease;
 }
 
-.skills:hover {
-    transform: scale(1.02);
-}
 
 .skills h2 {
     text-align: center;
