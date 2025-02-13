@@ -4,21 +4,52 @@ import './Projects.css';
 
 const projectsData = [
     {
-        title: "Portfolio Website",
-        description: "A personal portfolio website to showcase my skills and projects.",
-        image: "/images/portfolio-screenshot.jpg",
+        title: "AI-Powered Landing Page for Customer Engagement",
+        description: "Developed an interactive landing page featuring an AI chatbot for consultations and quote requests.",
+        image: "/images/rhino.jpg",
+        link: "https://weatherapp.com",
+        github: "https://github.com/weatherapp",
+        techStack: ["React", "API"]
+    },
+    {
+        title: "Led Bell",
+        description: `Designed, developed, and deployed a mobile application to control a doorbell in a deaf-friendly home, 
+            utilizing a Raspberry Pi Pico W and HTTP requests for seamless integration.`,
+        image: "/images/led_timbre.png",
         link: "https://myportfolio.com",
         github: "https://github.com/myportfolio",
         techStack: ["React", "CSS"]
     },
     {
         title: "Weather App",
-        description: "A weather forecasting app using React and API integration.",
-        image: "/images/weather-app.jpg",
+        description: `Developed a weather forecasting app using React and API integration 
+            providing real-time weather updates, temperature trends, and location-based forecasts.`,
+        image: "/images/weather.png",
         link: "https://weatherapp.com",
         github: "https://github.com/weatherapp",
         techStack: ["React", "API"]
     },
+    {
+        title: "CLOTS",
+        description: `Developed a web application using PHP and MySQL that enables to 
+            play musical digital instruments via Raspberry Pi Pico W. 
+            Includes real-time sound and data visualized on dashboards.`,        
+        image: "/images/clots.webp",
+        link: "https://weatherapp.com",
+        github: "https://github.com/weatherapp",
+        techStack: ["React", "API"]
+    },
+    {
+        title: "TCP-Based Decision Support System for Ketal Supermarket",
+        description: `Developed a TCP-based Decision Support System for Ketal Supermarket, 
+                    enabling real-time data processing and analytics to optimize inventory 
+                    management and sales forecasting`,        
+        image: "/images/ketal.png",
+        link: "https://weatherapp.com",
+        github: "https://github.com/weatherapp",
+        techStack: ["React", "API"]
+    },
+
     // Add more projects here
 ];
 

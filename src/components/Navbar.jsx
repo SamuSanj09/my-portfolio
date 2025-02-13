@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo">
-          <Link to="/">Mi Portafolio</Link>  {/* Link a la home */}
+          <a href="#home">Mi Portafolio</a>  {/* Link to the home section */}
         </div>
         
         <ul className="nav-links">
-          <li><Link to="/skills">Skills</Link></li>      {/* Link a Skills */}
-          <li><Link to="/education">Education</Link></li> {/* Link a Education */}
-          <li><Link to="/projects">Projects</Link></li>   {/* Link a Projects */}
+          <li><a href="#skills">Skills</a></li>      {/* Link to the Skills section */}
+          <li><a href="#education">Education</a></li> {/* Link to the Education section */}
+          <li><a href="#projects">Projects</a></li>   {/* Link to the Projects section */}
         </ul>
       </div>
     </nav>
@@ -21,5 +20,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
