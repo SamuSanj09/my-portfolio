@@ -1,42 +1,80 @@
-#root {
-  max-width: 1280px;
+/* General body/container styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container for the whole page */
+.page-container {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem; /* Optional: Adjust padding to create space inside the container */
+}
+
+/* Default styles for both mobile and desktop */
+section {
+  padding: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+/* Mobile Styles */
+.mobile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  max-width: 1200px; /* Limit width for mobile */
+  margin: 0 auto; /* Center on the screen */
+  padding: 0 20px;
+}
+
+/* Desktop Styles */
+.desktop-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Adjust items horizontally */
+  gap: 20px;
+  max-width: 1200px; /* Limit width for desktop */
+  margin: 0 auto; /* Center on the screen */
+}
+
+/* Optional: Message for mobile screens */
+.mobile-message {
+  display: block;
   text-align: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 1.2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.desktop-message {
+  display: block;
+  text-align: center;
+  background-color: #e0e0e0;
+  padding: 10px;
+  font-size: 1.2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Apply page-container styles only for desktop */
+@media (min-width: 769px) {
+  .page-container {
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .mobile-section {
+    display: block; /* Hide mobile layout for desktop */
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* Optional: Adding responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  /* Any styles that should only apply to mobile screens */
+  .desktop-section {
+    display: block; /* Stack sections vertically on mobile */
+  }
+  .page-container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
 }
