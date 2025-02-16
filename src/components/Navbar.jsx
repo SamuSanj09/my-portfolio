@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import './Navbar.css';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen); // Toggle the menu visibility
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo">
-          <a href="#home">Mi Portafolio</a>  {/* Link to the home section */}
+          <a href="#home">Samuel Sanjines 💻</a>
         </div>
-        
-        <ul className="nav-links">
-          <li><a href="#skills">Skills</a></li>      {/* Link to the Skills section */}
-          <li><a href="#education">Education</a></li> {/* Link to the Education section */}
-          <li><a href="#projects">Projects</a></li>   {/* Link to the Projects section */}
+
+        {/* Mobile Menu Icon */}
+        {isMobile && (
+          <div className="menu-icon" onClick={toggleMenu}>
+            ☰ {/* Hamburger icon */}
+          </div>
+        )}
+
+        {/* Navbar Links */}
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+          <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
+          <li><a href="#education" onClick={() => setMenuOpen(false)}>Education</a></li>
+          <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
         </ul>
       </div>
     </nav>

@@ -40,7 +40,7 @@ const projectsData = [
         techStack: ["React", "API"]
     },
     {
-        title: "TCP-Based Decision Support System for Ketal Supermarket",
+        title: "TCP & DSS for Ketal Supermarket",
         description: `Developed a TCP-based Decision Support System for Ketal Supermarket, 
                     enabling real-time data processing and analytics to optimize inventory 
                     management and sales forecasting`,        
