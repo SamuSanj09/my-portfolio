@@ -1,58 +1,90 @@
-
-
+/* Default styles for the glowing text */
 .glowing-text {
     color: green;
     text-shadow: 0 0 100px #16e616, 0 0 100px #00ff00, 0 0 100px #18da18;
-  }
+}
 
+/* Animated text */
+.animated-name {
+    animation: slideIn 1.3s ease-out;
+    animation-fill-mode: forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  .profile-image {
+/* Text container for aligning text */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-container p {
+    font-size: 20px;
+}
+
+/* Profile image style */
+.profile-image {
     width: 150px;
     height: 150px;
-    border-radius: 50%; 
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     margin-top: 100px;
-  }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-
-  @keyframes slideIn {
+/* Animation for the slide-in effect */
+@keyframes slideIn {
     0% { opacity: 0; transform: translateY(30px); }
     100% { opacity: 1.5; transform: translateY(0); }
 }
 
-.animated-name {
-    animation: slideIn 1.3s ease-out;
-} 
+/* CTA section for buttons */
+.cta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
 
-
+/* CTA Button styles */
 .cta-button {
-    color: white; /* Set the text color */
-    border: none; /* Remove the border */
+    color: white;
+    border: 2px solid green;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
 }
 
-/* Animation for hover */
+/* Hover effect on buttons */
 .cta-button:hover {
-    border: 2px solid green; /* Add white border on hover */
-    animation: pulse 1s infinite; /* Add pulse animation */
+    border: 2px solid green;
+    animation: pulse 1s infinite;
 }
 
+/* Pulse animation for buttons */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.03); }
 }
 
-
+/* Experience section style */
 .experience-section {
     margin-top: 50px;
     padding: 20px;
     background-color: #242424;
     border-radius: 10px;
+    width: 100%;
 }
 
 /* Timeline container */
@@ -62,7 +94,7 @@
     margin: auto;
 }
 
-/* Vertical line */
+/* Vertical line for timeline */
 .timeline::after {
     content: '';
     position: absolute;
@@ -74,7 +106,7 @@
     margin-left: -2px;
 }
 
-/* Timeline item */
+/* Timeline item style */
 .timeline-item {
     position: relative;
     width: 50%;
@@ -82,19 +114,19 @@
     box-sizing: border-box;
 }
 
-/* Left items */
+/* Left-aligned items */
 .timeline-item.left {
     left: 0;
     text-align: right;
 }
 
-/* Right items */
+/* Right-aligned items */
 .timeline-item.right {
     left: 50%;
     text-align: left;
 }
 
-/* Timeline content */
+/* Timeline content style */
 .timeline-content {
     background-color: #388E3C;
     padding: 15px;
@@ -104,11 +136,11 @@
 }
 
 .timeline-content:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
-/* Circles */
+/* Circle at each timeline item */
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -120,16 +152,17 @@
     z-index: 1;
 }
 
-/* Circle positions */
+/* Circle position for left items */
 .timeline-item.left::before {
     right: -8px;
 }
 
+/* Circle position for right items */
 .timeline-item.right::before {
     left: -8px;
 }
 
-
+/* Fun fact section */
 .fun-fact {
     background-color: #242424;
     padding: 20px;
@@ -137,7 +170,7 @@
     margin-top: 50px;
 }
 
-
+/* Fun facts container */
 .fun-facts {
     text-align: center;
     padding: 30px;
@@ -169,11 +202,76 @@
     transition: transform 0.2s;
     margin: 10px;
     color: #333;
-    
 }
 
 .fun-facts li:hover {
     transform: scale(1.05);
 }
 
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+    /* Adjust font size for mobile */
+    .animated-name {
+        font-size: 23px;
+    }
 
+    .text-container p {
+        font-size: 16px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .timeline {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        text-align: center;
+    }
+
+    .timeline::after {
+        display: none; /* Remove vertical line */
+    }
+
+    .timeline-item::before {
+        display: none; /* Remove timeline circles */
+    }
+}
+
+/* Responsive styles for tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .animated-name {
+        font-size: 40px;
+    }
+
+    .text-container p {
+        font-size: 19px;
+        padding: 10px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .timeline {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .timeline-item {
+        width: 45%;
+    }
+}
