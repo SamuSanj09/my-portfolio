@@ -23,8 +23,10 @@ const Home = () => {
             </div>
 
             {/* Laboral Experience Section (Timeline Style) */}
-            <section className="experience-section">
+            <div className="text-container" style={{marginTop: '50px'}}>
             <h2>Laboral Experience</h2>
+            </div>
+            <section className="experience-section">
             <div className="timeline">
                 <div className="timeline-item left">
                     <div className="timeline-content">

@@ -109,3 +109,30 @@
         transform: translateX(0);
     }
 }
+
+/* Making Responsive */
+
+@media (max-width: 768px) {
+    .project-banner {
+        position: relative;
+        width: 200px;  
+        height: 400px; 
+        border-radius: 30px;
+    }
+
+    .project-text {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-banner {
+        width: 150px;
+        height: 250px;
+    }
+
+    .project-text {
+        font-size: 0.6rem;
+    }
+}

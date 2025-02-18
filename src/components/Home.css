@@ -78,14 +78,7 @@
     50% { transform: scale(1.03); }
 }
 
-/* Experience section style */
-.experience-section {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #242424;
-    border-radius: 10px;
-    width: 100%;
-}
+
 
 /* Timeline container */
 .timeline {
@@ -173,7 +166,7 @@
 /* Fun facts container */
 .fun-facts {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     background-color: #242424;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -238,7 +231,7 @@
 
     .timeline-item.left,
     .timeline-item.right {
-        text-align: center;
+        text-align: right;
     }
 
     .timeline::after {
@@ -247,6 +240,18 @@
 
     .timeline-item::before {
         display: none; /* Remove timeline circles */
+    }
+
+    /* Left-aligned items */
+    .timeline-item.left {
+        left: -20%; /* Mueve los elementos de la izquierda ligeramente hacia la izquierda */
+        text-align: right;
+    }
+
+    /* Right-aligned items */
+    .timeline-item.right {
+        left: 20%; /* Mueve los elementos de la derecha ligeramente hacia la derecha */
+        text-align: left;
     }
 }
 
