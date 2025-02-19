@@ -41,7 +41,7 @@ const projectsData = [
     },
     {
         title: "TCP & DSS for Ketal Supermarket",
-        description: `Developed a TCP-based Decision Support System for Ketal Supermarket, 
+        description: `Developed a TCP-DSS for Ketal Supermarket, 
                     enabling real-time data processing and analytics to optimize inventory 
                     management and sales forecasting`,        
         image: "/images/ketal.png",
@@ -56,7 +56,9 @@ const projectsData = [
 const Projects = () => {
     return (
         <section className="projects">
-    <h2>My Projects</h2>
+            <div className="text-container">
+                <h2>My Projects</h2>
+            </div>
     <div className="project-banners">
         {projectsData.map((project, index) => (
             <div key={index} className="project-banner">
