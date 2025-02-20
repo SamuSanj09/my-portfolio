@@ -20,6 +20,7 @@
     scrollbar-width: thin;
     scrollbar-color: green transparent;
     justify-content: center; /* Vuelto a center */
+    margin-left: -2.5%; /* Ajustado el margen izquierdo */
 }
 
 .project-banners-wrapper {

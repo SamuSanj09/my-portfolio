@@ -187,7 +187,7 @@
 .fun-facts li {
     font-size: 18px;
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
     background: rgb(219, 213, 213);
     border-radius: 8px;
     display: inline-block;
@@ -195,6 +195,7 @@
     transition: transform 0.2s;
     margin: 10px;
     color: #333;
+    margin-top: 50px;
 }
 
 .fun-facts li:hover {
@@ -202,7 +203,7 @@
 }
 
 /* Responsive styles for mobile screens */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     /* Adjust font size for mobile */
     .animated-name {
         font-size: 23px;
@@ -256,7 +257,7 @@
 }
 
 /* Responsive styles for tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .animated-name {
         font-size: 40px;
     }
@@ -279,4 +280,15 @@
     .timeline-item {
         width: 45%;
     }
+
+    .timeline-content {
+    background-color: #388E3C;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
+}
+
+
+
