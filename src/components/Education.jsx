@@ -10,6 +10,13 @@ const educationData = [
         photo: "/images/ucb.png" 
     },
     {
+        degree: "Intern at UCB",
+        institution: "Universidad Católica Boliviana (UCB)",
+        year: "2023",
+        description: "Managed and deployed a project for the University’s Science Department.",
+        photo: "/images/ucb.png" 
+    },
+    {
         degree: "Bachelor’s Degree in Computer Science",
         institution: "Western Governors University (WGU)",
         year: "2026",
@@ -23,13 +30,7 @@ const educationData = [
         description: "Hands-on experience with AWS Lambda, DynamoDB, and API Gateway.",
         photo: "/images/aws2.png"  
     },
-    {
-        degree: "Intern at UCB",
-        institution: "Universidad Católica Boliviana (UCB)",
-        year: "2023",
-        description: "Managed and deployed a project for the University’s Science Department.",
-        photo: "/images/ucb.png" 
-    },	
+    	
 ];
 
 const Education = () => {
