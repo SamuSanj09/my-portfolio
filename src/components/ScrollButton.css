@@ -1,7 +1,7 @@
 .scroll-to-top {
-    position: fixed !important; /* Forzamos fixed */
-    bottom: 30px !important;   /* Aumentamos distancia del fondo */
-    right: 50px !important;    /* Aumentamos distancia de la derecha */
+    position: fixed !important; 
+    bottom: 30px !important;  
+    right: 50px !important;   
     width: 60px;
     height: 60px;
     background-color: #2c2c2c;
@@ -19,27 +19,37 @@
 }
 
 .scroll-to-top:hover {
-    border: 3.5px solid green; /* Set default border to green */
-    border-color: green; /* Agregamos borde verde */
+    border: 3.5px solid green; 
+    border-color: green; 
     background-color: #2c2c2c; /* Mantenemos el fondo original */
     transform: translateY(-3px);
     box-shadow: 0 10px 15px rgba(0, 255, 0, 0.3); /* Ajustamos sombra */
 }
 
 .scroll-to-top:focus {
-    outline: none; /* Evita el borde predeterminado del navegador */
-    border-color: green; /* Mantiene el borde verde después de hacer clic */
+    outline: none; 
+    border-color: green; 
 }
 
 @media (max-width: 768px) {
     .scroll-to-top {
-        right: 30px; /* Ajustamos posición en pantallas pequeñas */
+        right: 6px !important; 
+        bottom: 12px !important;  
+        width: 58px;
+        height: 58px;
+        font-size: 2.1rem; /* Aumenta aún más el tamaño en dispositivos pequeños */
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
 }
 
 @media (max-width: 769px) and (max-width: 1024px) {
     .scroll-to-top {
-        right: 20px; /* Ajustamos posición en pantallas más pequeñas */
+        right: 6px !important; 
+        bottom: 10px !important;  
     }
     
 }

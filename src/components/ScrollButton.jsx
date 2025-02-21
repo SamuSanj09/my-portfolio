@@ -1,52 +1,42 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './ScrollButton.css';
 
 const ScrollButton = () => {
     console.log('ScrollButton component rendered');
-    
-    // Test if scrolling works on mount
+    const [isVisible, setIsVisible] = useState(false);
+
+    // Detecta el desplazamiento y muestra el botón cuando se hayan desplazado 300px
     useEffect(() => {
-        console.log('Testing scroll capabilities on mount');
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                console.log('Scroll detected, setting visibility to true');
+                setIsVisible(true);
+            } else {
+                console.log('Scroll detected, setting visibility to false');
+                setIsVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Limpiar el evento de scroll cuando el componente se desmonte
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
-    
+
     const scrollToTop = () => {
-        console.log('Button clicked, attempting multiple scroll methods');
-        
-        // Method 1: Basic scrollTo
-        window.scrollTo(0, 0);
-        console.log('Method 1 executed');
-        
-        // Method 2: With behavior smooth
-        try {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-            console.log('Method 2 executed');
-        } catch (e) {
-            console.error('Smooth scroll failed:', e);
-        }
+        console.log('Button clicked, attempting to scroll to top');
         
         // Method 3: Document element properties
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0; // For Safari
-        console.log('Method 3 executed');
-        
-        // Method 4: requestAnimationFrame for smoother scrolling
-        const scrollToTopAnimated = () => {
-            const c = document.documentElement.scrollTop || document.body.scrollTop;
-            if (c > 0) {
-                window.requestAnimationFrame(scrollToTopAnimated);
-                window.scrollTo(0, c - c / 8);
-            }
-        };
-        window.requestAnimationFrame(scrollToTopAnimated);
-        console.log('Method 4 executed');
+        console.log('Scroll to top executed');
     };
-    
+
     return (
         <button
-            className="scroll-to-top"
+            className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
             onClick={scrollToTop}
             aria-label="Scroll to top"
         >
