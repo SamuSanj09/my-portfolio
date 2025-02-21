@@ -6,18 +6,17 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollButton from './components/ScrollButton';
 import './App.css';
 
 function App() {
-  // Mobile detection with React Responsive
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <>
       <div className="page-container">
-        <Navbar />  
-
-        {/* Adjust section layouts based on screen size */}
+        <Navbar />
+        
         <section id="home" className={isMobile ? "mobile-section" : "desktop-section"}>
           <Home />
         </section>
@@ -33,9 +32,11 @@ function App() {
         <section id="projects" className={isMobile ? "mobile-section" : "desktop-section"}>
           <Projects />
         </section>
+
+        {/* Coloca el ScrollButton aquí */}
+        <ScrollButton />
       </div>
 
-      {/* Footer outside the page-container */}
       <Footer />
     </>
   );

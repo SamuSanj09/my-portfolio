@@ -1,0 +1,26 @@
+/* ScrollButton.css */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;  /* El botón está oculto por defecto */
+    transition: all 0.3s ease;
+}
+
+/* Mostrar el botón cuando el usuario hace scroll */
+.scroll-to-top.show {
+    display: block;  /* Cambia a bloque para hacerlo visible */
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
