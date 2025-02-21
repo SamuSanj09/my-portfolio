@@ -10,6 +10,12 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem; /* Optional: Adjust padding to create space inside the container */
+  padding-bottom: 60px; /* Ajusta esto según la altura de tu footer */
+}
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
 }
 
 /* Default styles for both mobile and desktop */
@@ -25,6 +31,8 @@ section {
   max-width: 1400px; /* Limit width for mobile */
   margin: 0 auto; /* Center on the screen */
   padding: 0 20px;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 /* Desktop Styles */
@@ -35,6 +43,8 @@ section {
   gap: 20px;
   max-width: 1200px; /* Limit width for desktop */
   margin: 0 auto; /* Center on the screen */
+  min-height: 100vh;
+  padding: 20px;
 }
 
 /* Optional: Message for mobile screens */
