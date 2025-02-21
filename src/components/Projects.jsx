@@ -1,5 +1,7 @@
 import React from "react";
 import './Projects.css';
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
+import 'animate.css';
 
 
 const projectsData = [
@@ -71,6 +73,25 @@ const Projects = () => {
             </div>
         ))}
     </div>
+
+    <div className="text-center mt-5 p-5 bg-gradient bg-dark text-light rounded shadow-lg">
+        <h3 className="fw-bold display-4 animate__animated animate__pulse animate__infinite">
+            Looking for a <span className="text-warning">passionate developer?</span>  
+        </h3>
+        <h4 className="text-info fw-bold mt-3 animate__animated animate__fadeInUp">
+            I'm ready for new challenges! 🚀
+        </h4>
+        {/* Botón adicional fuera de los banners de proyectos */}
+        <a 
+            href="mailto:sanjines009@gmail.com" 
+            className="btn btn-danger mt-4"
+            target="_blank" 
+            rel="noopener noreferrer"
+        >
+            Contact Me!
+        </a>
+    </div>
+
 </section>
     );
 }	

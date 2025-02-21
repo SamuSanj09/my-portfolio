@@ -128,10 +128,20 @@
     text-align: center;
 }
 
+.text-center h3 {
+    font-size: 1.8rem; 
+    text-align: center; /* Center the text horizontally */
+}
+
+.text-center h4 {
+    font-size: 1.6rem; 
+    text-align: center; /* Center the text horizontally */
+}
+
 
 /* Making Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .project-banners {
         justify-content: flex-start;
         padding: 20px 10px;
@@ -151,23 +161,73 @@
         font-size: 1rem; /* Aumenta el tamaño de la descripción */
         line-height: 1.2;  /* Mejora la legibilidad */
     }
+
+    .text-center h3 {
+        font-size: 1.25rem; 
+        text-align: center; /* Center the text horizontally */
+    }
+    
+    .text-center h4 {
+        font-size: 1.15rem; 
+        text-align: center; /* Center the text horizontally */
+    }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+
+.text-center .btn {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid transparent; /* Borde invisible por defecto */
+    background-color: #242424; /* Fondo oscuro */
+    color: #55c93c;
+    transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+    margin-top: 70px !important; /* Uso de !important para forzar el margen */
+    gap: 100px;
+}
+
+.text-center .btn:hover {
+    background-color: #181818; /* Rojo más oscuro en hover */
+    border-color: green; /* Borde verde en hover */
+    transform: scale(1.05); 
+}
+
+.text-center .btn:active {
+    background-color: #212121; 
+    border-color: green; 
+    color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
     .project-banners {
         justify-content: flex-start;
-        padding: 20px 15px;
+        padding: 20px 10px;
     }
     
     .project-banner {
-        width: 150px;
-        height: 250px;
+        width: 330px;
+        height: 530px;
+        border-radius: 30px;
+    }
+
+    .project-text h3 {
+        font-size: 1.6rem; /* Reduce un poco el tamaño del título */
     }
     
-    .project-text {
-        font-size: 0.6rem;
-        width: 100%;
-        height: 100%;
+    .project-text p {
+        font-size: 1.4rem; /* Aumenta el tamaño de la descripción */
+        line-height: 1.2;  /* Mejora la legibilidad */
+    }
+
+    .text-center h3 {
+        font-size: 1.8rem; 
+        text-align: center; /* Center the text horizontally */
+    }
+    
+    .text-center h4 {
+        font-size: 1.7rem; 
+        text-align: center; /* Center the text horizontally */
     }
     
 }
