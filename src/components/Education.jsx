@@ -5,14 +5,14 @@ const educationData = [
     {
         degree: "C.S. (6 Semesters Completed)",
         institution: "Universidad Católica Boliviana (UCB)",
-        year: "2022 - 2025",
+        year: "2022 - 2024",
         description: "Completed coursework in algorithms, databases, and software engineering before transferring.",
         photo: "/images/ucb.png" 
     },
     {
         degree: "Intern at UCB",
         institution: "Universidad Católica Boliviana (UCB)",
-        year: "2023",
+        year: "2024",
         description: "Managed and deployed a project for the University’s Science Department.",
         photo: "/images/ucb.png" 
     },
