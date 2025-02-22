@@ -1,6 +1,5 @@
 /* Base navbar styles */
 .navbar {
-  width: 80%;
   width: 90%;
   margin: 0 auto; /* Centra la barra de navegación */
   justify-content: center; /* Centra la navbar */
@@ -118,6 +117,7 @@
     display: flex;
     width: 100%;
     margin-top:  6px;
+
   }
 
   .logo a {
@@ -161,6 +161,7 @@
     display: flex;
     width: 100%;
     margin-top:  6px;
+
   }
 
   .logo a {
