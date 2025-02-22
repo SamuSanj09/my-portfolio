@@ -85,7 +85,7 @@ const Home = () => {
 
             {/* Fun Facts Section */}
             <section className="fun-facts">
-                <h2>Fun Facts About Me</h2>
+                <h2  style={{ marginTop: '90px' }}>Fun Facts About Me</h2>
                 <ul>
                 {funFacts.map((fact, index) => (
     <motion.li

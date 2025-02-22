@@ -1,26 +1,55 @@
-/* ScrollButton.css */
 .scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
+    position: fixed !important; 
+    bottom: 30px !important;  
+    right: 50px !important;   
+    width: 60px;
+    height: 60px;
+    background-color: #2c2c2c;
     color: white;
-    border: none;
-    padding: 15px;
+    border: 2.5px solid green; /* Set default border to green */
     border-radius: 50%;
-    font-size: 24px;
     cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    display: none;  /* El botón está oculto por defecto */
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999 !important;  /* Aseguramos que esté por encima de todo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
 }
 
-/* Mostrar el botón cuando el usuario hace scroll */
-.scroll-to-top.show {
-    display: block;  /* Cambia a bloque para hacerlo visible */
+.scroll-to-top:hover {
+    border: 3.5px solid green; 
+    border-color: green; 
+    background-color: #2c2c2c; /* Mantenemos el fondo original */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 255, 0, 0.3); /* Ajustamos sombra */
 }
 
-.scroll-to-top:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
+.scroll-to-top:focus {
+    outline: none; 
+    border-color: green; 
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        right: 6px !important; 
+        bottom: 12px !important;  
+        width: 58px;
+        height: 58px;
+        font-size: 2.1rem; /* Aumenta aún más el tamaño en dispositivos pequeños */
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 769px) and (max-width: 1024px) {
+    .scroll-to-top {
+        right: 6px !important; 
+        bottom: 10px !important;  
+    }
+    
 }
