@@ -1,44 +1,54 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import './ScrollButton.css';
 
 const ScrollButton = () => {
-    console.log('ScrollButton component rendered');
     const [isVisible, setIsVisible] = useState(false);
 
-    // Detecta el desplazamiento y muestra el botón cuando se hayan desplazado 300px
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                console.log('Scroll detected, setting visibility to true');
-                setIsVisible(true);
-            } else {
-                console.log('Scroll detected, setting visibility to false');
-                setIsVisible(false);
-            }
-        };
+    // Maneja el evento de scroll
+    const handleScroll = () => {
+        console.log('Scroll event triggered'); // Depuration
+        console.log('ScrollY:', window.scrollY); // Depuration
 
+        if (window.scrollY > 100) {
+            console.log('ScrollY > 100, haciendo el botón visible'); 
+            setIsVisible(true);
+        } else {
+            console.log('ScrollY <= 100, ocultando el botón'); 
+            setIsVisible(false);
+        }
+    };
+
+    useEffect(() => {
+        console.log('Componente montado, registrando evento de scroll'); 
+
+        // Register it
         window.addEventListener('scroll', handleScroll);
 
-        // Limpiar el evento de scroll cuando el componente se desmonte
+        // Verifify the initial scroll position
+        handleScroll();
+
         return () => {
+            console.log('Componente desmontado, eliminando evento de scroll'); 
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, []); 
 
+    useEffect(() => {
+        console.log('Estado isVisible actualizado:', isVisible); 
+    }, [isVisible]);
+
+    // Scroll Function
     const scrollToTop = () => {
-        console.log('Button clicked, attempting to scroll to top');
-        
-        // Method 3: Document element properties
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0; // For Safari
-        console.log('Scroll to top executed');
+        console.log('Botón clickeado, haciendo scroll hacia arriba'); // Depuración
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
         <button
-            className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
+            className={`scroll-to-top ${isVisible ? 'visible' : 'hidden'}`}
             onClick={scrollToTop}
             aria-label="Scroll to top"
+            tabIndex={0} 
         >
             ↑
         </button>
