@@ -1,5 +1,4 @@
 .scroll-to-top {
-    position: fixed;
     position: fixed !important; 
     bottom: 30px !important;  
     right: 50px !important;   
