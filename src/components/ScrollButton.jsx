@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import './ScrollButton.css';
+import { BiArrowFromBottom } from "react-icons/bi";
+
 
 const ScrollButton = () => {
     console.log('ScrollButton component rendered');
@@ -40,7 +42,8 @@ const ScrollButton = () => {
             onClick={scrollToTop}
             aria-label="Scroll to top"
         >
-            ↑
+            <BiArrowFromBottom />
+            ↑ 
         </button>
     );
 };
