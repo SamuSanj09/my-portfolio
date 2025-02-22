@@ -55,15 +55,15 @@ const Home = () => {
             <section className="experience-section">
                 <div className="timeline">
                     {[
-                        { title: "Full Stack Developer", company: "XYZ Company", 
-                            period: "2022 - Present", 
-                            description: "Developing and maintaining web applications using React, Node.js, and MongoDB." },
-                        { title: "Software Engineer Intern", company: "ABC Corp",
-                             period: "2021 - 2022", 
-                             description: "Worked on optimizing database queries and improving backend APIs." },
-                        { title: "Freelance Developer", company: "Self-Employed", 
-                            period: "2020 - 2021", 
-                            description: "Built websites and mobile apps for small businesses and startups." }
+                        { title: "Freelancer Frontend Developer", company: "Self-Employed", 
+                            period: "2023 - Present", 
+                            description: "Developing and creating Landing Pages for small business" },
+                        { title: "Software Engineer Intern", company: "Universidad Catolica Boliviana",
+                             period: "2024", 
+                             description: "Worked on improving backend APIs for better performance and scalability." },
+                        { title: "Full Stack Developer", company: "Illimani S.R.L", 
+                            period: "2025", 
+                            description: "Built website and managment system for inventory tracking and administration." }
                     ].map((job, index) => (
                         <motion.div 
                             key={index} 
