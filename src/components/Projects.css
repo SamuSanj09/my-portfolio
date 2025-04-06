@@ -15,11 +15,11 @@
     gap: 30px;
     padding: 20px 0; /* Cambiado a solo padding vertical */
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     scrollbar-width: thin;
     scrollbar-color: green transparent;
-    justify-content: center; /* Vuelto a center */
+    justify-content: flex-start; /* Vuelto a center */
     margin-left: -2.5%; /* Ajustado el margen izquierdo */
 }
 
@@ -29,6 +29,7 @@
     justify-content: center;
     padding: 0; /* Eliminado el padding de 20px */
     box-sizing: border-box;
+    margin-left: -20.5%;
 }
 
 .project-banner {
@@ -41,12 +42,14 @@
     box-shadow: 0px 4px 8px rgba(85, 199, 62, 0.4);
     transition: opacity 0.5s ease;
     flex-shrink: 0;
+    
 }
 
 .project-banner-img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures images fit within the container */
+    
 }
 
 .project-banner:hover .project-banner-img {

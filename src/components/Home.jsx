@@ -45,7 +45,9 @@ const Home = () => {
             </div>
             <div className="cta-container">
                 <button className="cta-button">Contact Me</button>
-                <button className="cta-button">See My Work</button>
+                <button className="cta-button">
+                    <a href="https://your-resume-page.vercel.app" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>See my Resumé</a>
+                </button>
             </div>
 
             {/* Laboral Experience Section (Timeline Style) */}
@@ -61,7 +63,7 @@ const Home = () => {
                         { title: "Software Engineer Intern", company: "Universidad Catolica Boliviana",
                              period: "2024", 
                              description: "Worked on improving backend APIs for better performance and scalability." },
-                        { title: "Full Stack Developer", company: "Illimani S.R.L", 
+                        { title: "Full Stack Developer", company: "ROYLIS S.R.L", 
                             period: "2025", 
                             description: "Built website and managment system for inventory tracking and administration." }
                     ].map((job, index) => (
