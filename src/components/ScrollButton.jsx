@@ -42,9 +42,8 @@ const ScrollButton = () => {
             onClick={scrollToTop}
             aria-label="Scroll to top"
         >
-            <BiArrowFromBottom />
             ↑ 
-        </button>
+        </button>   
     );
 };
 
