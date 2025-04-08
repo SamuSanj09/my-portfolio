@@ -44,8 +44,12 @@ section {
   gap: 20px;
   max-width: 1200px; /* Limit width for desktop */
   margin: 0 auto; /* Center on the screen */
-  min-height: 80vh;
   padding: 20px;
+  min-height: 60vh;
+}
+
+.desktop-section .projects {
+  min-height: 80vh;
 }
 
 /* Optional: Message for mobile screens */

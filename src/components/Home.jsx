@@ -31,7 +31,7 @@ const Home = () => {
     return (
         <section>
             <img 
-                src="/images/model-photo.jpg" 
+                src="/images/failazo.jpeg" 
                 alt="Samuel Sanjines" 
                 className="profile-image" 
             />
