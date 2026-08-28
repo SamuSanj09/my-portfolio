@@ -35,7 +35,7 @@ const educationData = [
 
 const Education = () => {
     return (
-        <section className="education">
+        <section className="education" style={{ marginTop: '90px' }}>
             <h2>Education and Experience</h2>
             <div className="education-grid">
                 {educationData.map((edu, index) => (

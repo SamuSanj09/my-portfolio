@@ -31,7 +31,7 @@ const Home = () => {
     return (
         <section>
             <img 
-                src="/images/model-photo.jpg" 
+                src="/images/failazo.jpeg" 
                 alt="Samuel Sanjines" 
                 className="profile-image" 
             />
@@ -45,7 +45,9 @@ const Home = () => {
             </div>
             <div className="cta-container">
                 <button className="cta-button">Contact Me</button>
-                <button className="cta-button">See My Work</button>
+                <button className="cta-button">
+                    <a href="https://your-resume-page.vercel.app" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>See my Resumé</a>
+                </button>
             </div>
 
             {/* Laboral Experience Section (Timeline Style) */}
@@ -85,7 +87,7 @@ const Home = () => {
 
             {/* Fun Facts Section */}
             <section className="fun-facts">
-                <h2>Fun Facts About Me</h2>
+                <h2  style={{ marginTop: '90px' }}>Fun Facts About Me</h2>
                 <ul>
                 {funFacts.map((fact, index) => (
     <motion.li

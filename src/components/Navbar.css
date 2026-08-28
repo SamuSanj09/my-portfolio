@@ -1,18 +1,19 @@
 /* Base navbar styles */
 .navbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto; /* Centra la barra de navegación */
+  justify-content: center; /* Centra la navbar */
   align-items: center;
   padding: 10px 20px;
   background-color: #262626;
   color: white;
   border: 3.8px solid green;
-  border-radius: 10px;
+  border-radius: 12px;
   top: 0;
   left: 0;
   z-index: 100; /* Make sure it stays on top */
   box-sizing: border-box; /* Ensures padding is included in width */
+  margin-top: 14px;
 }
 
 /* Navbar Container */
@@ -51,7 +52,7 @@
   text-decoration: none;
   font-size: 24px;
   transition: color 0.3s ease;
-  padding: 10px 25px;
+  padding: 10px 12px;
   display: inline-block;
 }
 
@@ -65,9 +66,10 @@
   cursor: pointer;
   font-size: 30px;
   color: white;
-  right: 20px; /* Move it to the right */
+  right: 10px; /* Move it to the right */
   top: center; /* Align it vertically */
 }
+
 
 /* Mobile Menu Styles */
 @media screen and (max-width: 768px) {
@@ -109,10 +111,58 @@
   }
 }
 
+/* Mobile Menu Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    display: flex;
+    width: 100%;
+    margin-top:  6px;
+
+  }
+
+  .logo a {
+    font-size: 25px; /* Slightly smaller logo */
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu icon on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    position: absolute;
+    top: 60px; /* Place the menu below the navbar */
+    left: 0;
+    right: 0;
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth slide effect */
+    transform: translateY(-100%); /* Initially hide the menu */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the menu when active */
+    transform: translateY(0); /* Slide in the menu */
+  }
+
+  .nav-links li a {
+    font-size: 20px;
+  }
+}
+
 /* Tablet/Medium Screen Styles (for larger mobile screens, like iPads) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navbar {
     padding: 10px 20px;
+    display: flex;
+    width: 100%;
+    margin-top:  6px;
+
   }
 
   .logo a {

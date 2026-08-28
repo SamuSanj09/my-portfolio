@@ -21,12 +21,20 @@ body {
   section {
     padding: 20px;
   }
+
+  .education h2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
   
   /* Education section */
   .education {
     text-align: center;
     padding: 10px;
     width: 100%; /* Ensure it takes up the full width */
+    height: 10px; /* Make it full height */
   }
   
   /* Education grid */
@@ -144,6 +152,13 @@ body {
     p {
       margin: 10px;
     }
+
+    .education h2 {
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+  }
   }
   
 
