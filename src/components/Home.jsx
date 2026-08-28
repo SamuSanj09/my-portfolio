@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const funFacts = [
     "🎮 I enjoy playing shooter video games in my free time.",
     "🌎 I've visited 5 countries so far.",
-    "🤖 I built my first AI chatbot at 17.",
+    "🤖 I built my first AI chatbot at 19.",
     "✅ I love working from anywhere.",
 ];
 
@@ -35,12 +35,12 @@ const Home = () => {
                 alt="Samuel Sanjines" 
                 className="profile-image" 
             />
-            <h1 className="animated-name">Hey, I'm Samuel Sanjines</h1>
+            <h1 className="animated-name">Hey, I'm Jonathan Sanjines</h1>
             <div className="text-container">
                 <p>
-                    I have over <span className="glowing-text">3 years</span> of experience and a 
-                    <span className="glowing-text"> Bachelor's degree</span> in Computer Science from WGU. 
-                    I specialize in Full Stack Development and Data Science.
+                    I have over <span className="glowing-text">2 years</span> of experience and a 
+                    <span className="glowing-text"> Bachelor's degree</span> Computer Science from WGU. 
+                    I specialize in Full Stack Development and Data Analysis.
                 </p>
             </div>
             <div className="cta-container">
@@ -55,15 +55,15 @@ const Home = () => {
             <section className="experience-section">
                 <div className="timeline">
                     {[
-                        { title: "Full Stack Developer", company: "XYZ Company", 
+                        { title: "Freelancer Developer", company: "Small Business Clients", 
                             period: "2022 - Present", 
-                            description: "Developing and maintaining web applications using React, Node.js, and MongoDB." },
-                        { title: "Software Engineer Intern", company: "ABC Corp",
-                             period: "2021 - 2022", 
-                             description: "Worked on optimizing database queries and improving backend APIs." },
-                        { title: "Freelance Developer", company: "Self-Employed", 
-                            period: "2020 - 2021", 
-                            description: "Built websites and mobile apps for small businesses and startups." }
+                            description: "Built websites and mobile apps for small businesses, meeting the requirements" },
+                        { title: "IT Systems & Support Associate", company: "Milicom",
+                             period: "2024", 
+                             description: " Collaborated with a support team to develop backend logic" },
+                        { title: "Technical Support", company: "Roylis S.R.L    ", 
+                            period: "2025", 
+                            description: " Mentored by a senior developer, learned to maintain and support a small on-premise private database" }
                     ].map((job, index) => (
                         <motion.div 
                             key={index} 
@@ -91,11 +91,11 @@ const Home = () => {
     <motion.li
         key={index}
         className="fun-fact-item"
-        initial={{ opacity: 1, x: index % 2 === 0 ? -100 : 100 }} // Alterna izquierda/derecha
-        whileInView={{ opacity: 1, x: 0 }} // Se hacen visibles y vuelven a su lugar
-        exit={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }} // Salen ligeramente
-        transition={{ duration: 0.8, ease: "easeOut" }} // Más suave
-        viewport={{ once: false, amount: 0.1 }} // Activación más cerca
+        initial={{ opacity: 1, x: index % 2 === 0 ? -100 : 100 }} 
+        whileInView={{ opacity: 1, x: 0 }} 
+        exit={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }} 
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.1 }} 
     >
         {fact}
     </motion.li>

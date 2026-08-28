@@ -204,7 +204,18 @@
 
 /* Responsive styles for mobile screens */
 @media (max-width: 767px) {
-    /* Adjust font size for mobile */
+
+    .fun-fact-item {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .fun-fact-item.in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .animated-name {
         font-size: 23px;
     }

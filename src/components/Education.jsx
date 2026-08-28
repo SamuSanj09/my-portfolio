@@ -5,30 +5,30 @@ const educationData = [
     {
         degree: "C.S. (6 Semesters Completed)",
         institution: "Universidad Católica Boliviana (UCB)",
-        year: "2022 - 2025",
-        description: "Completed coursework in algorithms, databases, and software engineering before transferring.",
+        year: "2022 - 2024",
+        description: "Completed coursework in algorithms, databases, and software engineering before transferring to WGU.",
         photo: "/images/ucb.png" 
     },
     {
-        degree: "Intern at UCB",
-        institution: "Universidad Católica Boliviana (UCB)",
-        year: "2023",
-        description: "Managed and deployed a project for the University’s Science Department.",
-        photo: "/images/ucb.png" 
+        degree: "System & Support",
+        institution: "Milicom Corporation",
+        year: "2024",
+        description: "Collaborated with a support team to develop backend logic that delivered default responses",
+        photo: "/images/Milicom.jpg"
     },
     {
         degree: "Bachelor’s Degree in Computer Science",
         institution: "Western Governors University (WGU)",
-        year: "2026",
-        description: "Specialized in Full Stack Development and Data Science.",
+        year: "2025 - 2026",
+        description: "Specialized in Full Stack Development and Data Analysis.",
         photo: "/images/WGU.png"  
     },
     {
-        degree: "AWS Certified Developer – Associate",
-        institution: "Amazon Web Services",
+        degree: "Technical Support",
+        institution: "ROYLIS S.R.L",
         year: "2025",
-        description: "Hands-on experience with AWS Lambda, DynamoDB, and API Gateway.",
-        photo: "/images/aws2.png"  
+        description: " Mentored by a senior developer, learned to maintain and support a small on-premise private database",
+        photo: "/images/roylis_icon.png"  
     },
     	
 ];
