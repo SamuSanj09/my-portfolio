@@ -1,6 +1,7 @@
 .projects {
     text-align: center;
-    margin: 50px 0;
+    margin: 0;
+    padding: clamp(1rem, 3vw, 2rem) 0;
     position: relative;
     width: 100%;
     display: flex;
@@ -20,7 +21,7 @@
     scrollbar-width: thin;
     scrollbar-color: green transparent;
     justify-content: flex-start; /* Vuelto a center */
-    margin-left: -2.5%; /* Ajustado el margen izquierdo */
+    margin-left: 0;
 }
 
 .project-banners-wrapper {
@@ -247,8 +248,4 @@
         text-align: center; /* Center the text horizontally */
     }
 
-    .projects {
-        margin-top: 600px;
-    }	
-    
 }

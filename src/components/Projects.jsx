@@ -5,12 +5,22 @@ import 'animate.css';
 
 
 const projectsData = [
+
+    {
+        title: "Document Access Portal",
+        description: `real access-control requirement. The goal was to allow a specific group of pre-approved users to access and read a PDF online without providing a 
+                        public download or allowing unrestricted access.`,
+        image: "/images/apuntes_f7.jpg",
+        link: "https://pdf-web-prototype.vercel.app/login",
+        github: "https://pdf-web-prototype.vercel.app/login",
+        techStack: ["React", "API"]
+    },
     {
         title: "AI-Powered Landing Page for Customer Engagement",
         description: "Developed an interactive landing page featuring an AI chatbot for consultations and quote requests.",
         image: "/images/rhino.jpg",
-        link: "https://weatherapp.com",
-        github: "https://github.com/weatherapp",
+        link: "https://page-angular-pr4e.vercel.app/",
+        github: "https://page-angular-pr4e.vercel.app/",
         techStack: ["React", "API"]
     },
     {
@@ -18,18 +28,9 @@ const projectsData = [
         description: `Designed, developed, and deployed a mobile application to control a doorbell in a deaf-friendly home, 
             utilizing a Raspberry Pi Pico W and HTTP requests for seamless integration.`,
         image: "/images/led_timbre.png",
-        link: "https://myportfolio.com",
-        github: "https://github.com/myportfolio",
+        link: "https://github.com/SamuSanj09/timbre_led",
+        github: "https://github.com/SamuSanj09/timbre_led",
         techStack: ["React", "CSS"]
-    },
-    {
-        title: "Weather App",
-        description: `Developed a weather forecasting app using React and API integration 
-            providing real-time weather updates, temperature trends, and location-based forecasts.`,
-        image: "/images/weather.png",
-        link: "https://weatherapp.com",
-        github: "https://github.com/weatherapp",
-        techStack: ["React", "API"]
     },
     {
         title: "CLOTS",
@@ -37,8 +38,8 @@ const projectsData = [
             play musical digital instruments via Raspberry Pi Pico W. 
             Includes real-time sound and data visualized on dashboards.`,        
         image: "/images/clots.webp",
-        link: "https://weatherapp.com",
-        github: "https://github.com/weatherapp",
+        link: "https://github.com/SamuSanj09/Lampara_IOT_Software",
+        github: "https://github.com/SamuSanj09/Lampara_IOT_Software",
         techStack: ["React", "API"]
     },
     {

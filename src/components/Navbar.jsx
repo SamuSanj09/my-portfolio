@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo">
-          <a href="#home">Samuel Sanjines 💻</a>
+          <a href="#home">Jonathan Sanjines 💻</a>
         </div>
 
         {/* Mobile Menu Icon */}
