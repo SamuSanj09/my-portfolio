@@ -30,7 +30,7 @@ const Navbar = () => {
           <li><a href="#education" onClick={() => setMenuOpen(false)}>Education</a></li>
           <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
           <li>
-        <a href="https://turesume.vercel.app" target="_blank" rel="noopener noreferrer">Resumé</a></li>
+        <a href="/JonathanSanjines_Resume_Soft.pdf" target="_blank" rel="noopener noreferrer">Resumé</a></li>
         </ul>
       </div>
     </nav>

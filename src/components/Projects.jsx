@@ -48,8 +48,8 @@ const projectsData = [
                     enabling real-time data processing and analytics to optimize inventory 
                     management and sales forecasting`,        
         image: "/images/ketal.png",
-        link: "https://weatherapp.com",
-        github: "https://github.com/weatherapp",
+        link: "",
+        github: "",
         techStack: ["React", "API"]
     },
 
@@ -84,7 +84,7 @@ const Projects = () => {
         </h4>
         {/* Botón adicional fuera de los banners de proyectos */}
         <a 
-            href="mailto:sanjines009@gmail.com" 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=samuelsanjines09%40gmail.com" 
             className="btn btn-danger mt-4"
             target="_blank" 
             rel="noopener noreferrer"

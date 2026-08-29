@@ -1,112 +1,57 @@
-import React, { useEffect } from 'react';    
+import { motion } from 'framer-motion';
+import { FiFileText, FiMail } from 'react-icons/fi';
 import './Home.css';
-import { motion } from "framer-motion";
 
-const funFacts = [
-    "🎮 I enjoy playing shooter video games in my free time.",
-    "🌎 I've visited 5 countries so far.",
-    "🤖 I built my first AI chatbot at 19.",
-    "✅ I love working from anywhere.",
+const experience = [
+  { title: 'Freelance Developer', company: 'Small business clients', period: '2022 - Present', description: 'Building practical websites and mobile applications around each client’s goals.' },
+  { title: 'IT Systems & Support Associate', company: 'Milicom', period: '2024', description: 'Collaborated with a support team to develop and maintain backend logic.' },
+  { title: 'Technical Support', company: 'Roylis S.R.L.', period: '2025', description: 'Supported an on-premise database and learned production maintenance practices.' },
 ];
 
-const Home = () => {
-    useEffect(() => {
-        const handleScroll = () => {
-            const timelineItems = document.querySelectorAll(".timeline-item");
-            timelineItems.forEach((item) => {
-                const rect = item.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
-                    item.classList.add("in-view");
-                } else {
-                    item.classList.remove("in-view");
-                }
-            });
-        };
+const riseIn = {
+  hidden: { opacity: 0, y: 32 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.35, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+const Home = () => (
+  <section className="home" id="about">
+    <motion.div className="home__hero" initial="hidden" animate="visible" variants={{ visible: { transition: { delayChildren: 0.35, staggerChildren: 0.4 } } }}>
+      <motion.div className="home__portrait-wrap" variants={riseIn}>
+        <img src="/images/failazo.jpeg" alt="Jonathan Sanjines" className="profile-image" />
+      </motion.div>
 
-    return (
-        <section>
-            <img 
-                src="/images/failazo.jpeg" 
-                alt="Samuel Sanjines" 
-                className="profile-image" 
-            />
-            <h1 className="animated-name">Hey, I'm Jonathan Sanjines</h1>
-            <div className="text-container">
-                <p>
-                    I have over <span className="glowing-text">2 years</span> of experience and a 
-                    <span className="glowing-text"> Bachelor's degree</span> Computer Science from WGU. 
-                    I specialize in Full Stack Development and Data Analysis.
-                </p>
-            </div>
-            <div className="cta-container">
-                <button className="cta-button">Contact Me</button>
-                <button className="cta-button">
-                    <a href="https://your-resume-page.vercel.app" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>See my Resumé</a>
-                </button>
-            </div>
+      <div className="home__intro">
+        <motion.h1 variants={riseIn}>Hey, I&apos;m Jonathan Sanjines</motion.h1>
+        <motion.p variants={riseIn} className="home__summary">I have over <span className="glowing-text">2 years</span> of experience and I&apos;m completing my <span className="glowing-text">Bachelor&apos;s degree in Computer Science</span> at WGU. I specialize in Full Stack Development and Data Analysis.</motion.p>
+        <motion.div variants={riseIn} className="home__actions">
+          <a className="home__button home__button--primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=samuelsanjines09%40gmail.com" target="_blank" rel="noopener noreferrer"><FiMail aria-hidden="true" /> Contact Me</a>
+          <a className="home__button home__button--secondary" href="/JonathanSanjines_Resume_Soft.pdf" target="_blank" rel="noopener noreferrer"><FiFileText aria-hidden="true" /> See my Résumé</a>
+        </motion.div>
+      </div>
+    </motion.div>
 
-            {/* Laboral Experience Section (Timeline Style) */}
-            <div className="text-container" style={{marginTop: '50px'}}>
-                <h2>Laboral Experience</h2>
-            </div>
-            <section className="experience-section">
-                <div className="timeline">
-                    {[
-                        { title: "Freelancer Developer", company: "Small Business Clients", 
-                            period: "2022 - Present", 
-                            description: "Built websites and mobile apps for small businesses, meeting the requirements" },
-                        { title: "IT Systems & Support Associate", company: "Milicom",
-                             period: "2024", 
-                             description: " Collaborated with a support team to develop backend logic" },
-                        { title: "Technical Support", company: "Roylis S.R.L    ", 
-                            period: "2025", 
-                            description: " Mentored by a senior developer, learned to maintain and support a small on-premise private database" }
-                    ].map((job, index) => (
-                        <motion.div 
-                            key={index} 
-                            className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`} 
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.9, ease: "easeOut" }}
-                            viewport={{ once: false, amount: 0.3 }}
-                        >
-                            <div className="timeline-content">
-                                <h3>{job.title}</h3>
-                                <p>{job.company} ({job.period})</p>
-                                <p>{job.description}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
-
-            {/* Fun Facts Section */}
-            <section className="fun-facts">
-                <h2  style={{ marginTop: '90px' }}>Fun Facts About Me</h2>
-                <ul>
-                {funFacts.map((fact, index) => (
-    <motion.li
-        key={index}
-        className="fun-fact-item"
-        initial={{ opacity: 1, x: index % 2 === 0 ? -100 : 100 }} 
-        whileInView={{ opacity: 1, x: 0 }} 
-        exit={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }} 
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.1 }} 
-    >
-        {fact}
-    </motion.li>
-))}
-
-                </ul>
-            </section>
-        </section>
-    );
-}
+    <div className="home__experience">
+      <motion.div className="home__section-heading" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.35 }} variants={riseIn}>
+        <p>CAREER SNAPSHOT</p>
+        <h2>Experience built through real work.</h2>
+      </motion.div>
+      <div className="experience-grid">
+        {experience.map((job, index) => (
+          <motion.article className="experience-card" key={job.title} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={riseIn} transition={{ delay: index * 0.1, duration: 0.5 }}>
+            <span className="experience-card__number">0{index + 1}</span>
+            <p className="experience-card__period">{job.period}</p>
+            <h3>{job.title}</h3>
+            <p className="experience-card__company">{job.company}</p>
+            <p>{job.description}</p>
+          </motion.article>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default Home;
